@@ -2,7 +2,7 @@
 Comisión: 54140
 Alumno: Josefina Guarda.
 
-Este proyecto tiene como objetivo crear una aplicacion, MascotApp, que muestre informacion sobre las mascotas que estan adopcion, informacion de dichos de los adpotantes que adoptan dichas mascotas e informacion sobre los refugios.  
+Este proyecto tiene como objetivo crear una aplicacion, MascotApp, que muestre informacion sobre las mascotas que estan adopcion, informacion de los adpotantes que adoptan dichas mascotas e informacion sobre los refugios en donde se encuntran. Tambien se puede agregar Mascotas y Adoptantes a la app.  
 Este proyecto sigue el patrón Modelo-Vista-Template (MVT) de Django y cumple con los siguientes requisitos:
 1. **Herencia de HTML:** Todas las plantillas HTML están ubicadas en la carpeta `templates`, y se heredan de `base.html`.
 
@@ -16,4 +16,6 @@ Este proyecto sigue el patrón Modelo-Vista-Template (MVT) de Django y cumple co
 
 # Mejoras futuras: 
 - Mejorar la presentacion de la app usando Start Bootstrap.
+- Agregar Adoptantes y Refugios al app.
 - Agregar en Adoptantes las mascotas que se encuentran en un determinado refugio. 
+- Tratar de hacer que funcionen los comandos que comente (#) 
