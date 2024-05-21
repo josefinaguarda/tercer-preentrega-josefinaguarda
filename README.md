@@ -17,5 +17,5 @@ Este proyecto sigue el patrón Modelo-Vista-Template (MVT) de Django y cumple co
 # Mejoras futuras: 
 - Mejorar la presentacion de la app usando Start Bootstrap.
 - Agregar Adoptantes y Refugios al app.
-- Agregar en Adoptantes las mascotas que se encuentran en un determinado refugio. 
+- Agregar en Refugio las mascotas que se encuentran en un determinado refugio. 
 - Tratar de hacer que funcionen los comandos que comente (#) 
