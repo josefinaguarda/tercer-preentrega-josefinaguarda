@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from .models import Mascota, Refugio, Adoptante
+from . import models 
 
-admin.site.register(Mascota)
-admin.site.register(Refugio)
-admin.site.register(Adoptante)
+admin.site.register(models.Mascota)
+admin.site.register(models.Refugio)
+admin.site.register(models.Adoptante)
 
 
