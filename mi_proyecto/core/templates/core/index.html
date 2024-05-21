@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %}
+    <h1>Página inicial</h1>
+{% endblock title %}
+
+{% block content %}
+    <ul>
+        <li>
+            <a href="{% url 'mi_aplicacion:home' %}">Ir a Mascota</a>                
+        </li>
+    </ul>
+{% endblock content %}
