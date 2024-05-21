@@ -5,9 +5,12 @@
 {% endblock title %}
 
 {% block content %}
-    {% for object in object_list %}
+    {% for mascota in object_list %}
         <ul>
-            <li>{{ object }}</li>
+            <li>Nombre: {{ mascota.nombre }}</li>
+            <li>Edad: {{ mascota.edad }}</li>
+            <li>Sexo: {{ mascota.sexo }}</li>
+            <li>Descripción: {{ mascota.descripcion }}</li>
         </ul>
     {% endfor %}
 {% endblock content %}
