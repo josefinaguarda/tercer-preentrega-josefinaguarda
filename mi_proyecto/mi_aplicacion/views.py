@@ -36,18 +36,30 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
+from .models import Mascota
 from . import models, forms
 
 
-def home(request):
+def index(request):
     return render(request, "mi_aplicacion/index.html")
 
 
-class MascotaList(ListView):
-    model = models.Mascota
+def MascotaList(request):
+    # Filtra las mascotas que no están asociadas a ningún adoptante
+    mascotas = Mascota.objects.filter(adoptante__isnull=True)
+    return render(request, 'mi_aplicacion/mascota_list.html', {'mascotas': mascotas})
 
 
 class MascotaCreate(CreateView):
     model = models.Mascota
     form_class = forms.MascotaForm
     success_url = reverse_lazy("mi_aplicacion:mascota_list")
+    
+class RefugioList(ListView):
+    model = models.Refugio
+
+
+class RefugioCreate(CreateView):
+    model = models.Refugio
+    form_class = forms.RefugioForm
+    success_url = reverse_lazy("mi_aplicacion:refugio_list")  

@@ -17,7 +17,10 @@ from . import views
 app_name = "mi_aplicacion"
 
 urlpatterns = [
-    path("", views.home, name="home"),
-    path("mascota/list", views.MascotaList.as_view(), name="mascota_list"),
+    path("", views.index, name="index"),
+    path("mascota/list", views.MascotaList, name="mascota_list"),
     path("mascota/create", views.MascotaCreate.as_view(), name="mascota_create"),
+    path("refugio/list", views.RefugioList.as_view(), name="refugio_list"),
+    path("refugio/create", views.RefugioCreate.as_view(), name="refugio_create"),
 ]
+

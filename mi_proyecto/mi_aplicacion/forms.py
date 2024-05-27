@@ -22,3 +22,8 @@ class MascotaForm(forms.ModelForm):
     class Meta:
         model = models.Mascota
         fields = "__all__"
+        
+class RefugioForm(forms.ModelForm):
+    class Meta:
+        model = models.Refugio
+        fields = "__all__"
