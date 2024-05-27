@@ -1,14 +1,25 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    <h1>Mascotas</h1>
+    MascotApp
 {% endblock title %}
+
+{% block body_title %}
+    Centro de Adopcion
+{% endblock body_title %}
 
 {% block content %}
     <div>
-        <a href="{% url 'mi_aplicacion:mascota_list' %}">Lista de Mascotas disponibles</a>
-    </div>
-    <div>
+        <h2>Mascotas</h2>
+        <a href="{% url 'mi_aplicacion:mascota_list' %}">Lista de Mascotas en adopcion</a>
+        <br>
         <a href="{% url 'mi_aplicacion:mascota_create' %}">Agregar Mascota</a>
+    </div>
+    <br>
+    <div>
+        <h2>Refugios</h2>
+        <a href="{% url 'mi_aplicacion:refugio_list' %}">Lista de Refugios</a>
+        <br>
+        <a href="{% url 'mi_aplicacion:refugio_create' %}">Agregar Refugio</a>
     </div>
 {% endblock content %}
