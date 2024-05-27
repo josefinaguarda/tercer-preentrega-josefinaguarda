@@ -1,11 +1,15 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    <h1>Lista de Mascotas</h1>
+    Lista de Mascotas en adopcion
 {% endblock title %}
 
+{% block body_title %}
+    Mascotas en adopcion
+{% endblock body_title %}
+
 {% block content %}
-    {% for mascota in object_list %}
+    {% for mascota in mascotas %}
         <ul>
             <li>Nombre: {{ mascota.nombre }}</li>
             <li>Edad: {{ mascota.edad }}</li>
