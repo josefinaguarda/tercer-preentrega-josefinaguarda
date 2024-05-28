@@ -1,20 +1,37 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Lista de Mascotas en adopcion
+    Lista de Mascotas en adopción
 {% endblock title %}
 
 {% block body_title %}
-    Mascotas en adopcion
+    Mascotas en adopción
 {% endblock body_title %}
 
 {% block content %}
-    {% for mascota in mascotas %}
-        <ul>
-            <li>Nombre: {{ mascota.nombre }}</li>
-            <li>Edad: {{ mascota.edad }}</li>
-            <li>Sexo: {{ mascota.sexo }}</li>
-            <li>Descripción: {{ mascota.descripcion }}</li>
-        </ul>
-    {% endfor %}
-{% endblock content %} 
+    <div class="container my-5">
+        <h2 class="mb-4">Lista de Mascotas en adopción</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Refugio</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mascota in mascotas %}
+                    <tr>
+                        <td>{{ mascota.nombre }}</td>
+                        <td>{{ mascota.edad }}</td>
+                        <td>{{ mascota.get_sexo_display }}</td>
+                        <td>{{ mascota.descripcion }}</td>
+                        <td>{{ mascota.refugio.nombre }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

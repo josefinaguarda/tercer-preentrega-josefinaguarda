@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Refugios | Refugios
+{% endblock title %}
+
+{% block body_title %}
+    Refugios - Refugios: Vista en Detalle
+{% endblock body_title %}
+
+{% block content %}
+    <ul>
+        <li>Direccion: {{ object.direccion }}</li>
+        <li>Telefono: {{ object.telefono }}</li>
+    </ul>
+    <div>
+        <a href="{% url 'mi_aplicacion:refugio_list' %}">Volver</a>
+    </div>
+{% endblock content %}

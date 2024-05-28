@@ -1,25 +1,37 @@
+
 {% extends 'core/base.html' %}
 
 {% block title %}
-    MascotApp
+    Bienvenido a MascotApp
 {% endblock title %}
 
 {% block body_title %}
-    Centro de Adopcion
+    Bienvenido a MascotApp
 {% endblock body_title %}
 
 {% block content %}
-    <div>
-        <h2>Mascotas</h2>
-        <a href="{% url 'mi_aplicacion:mascota_list' %}">Lista de Mascotas en adopcion</a>
-        <br>
-        <a href="{% url 'mi_aplicacion:mascota_create' %}">Agregar Mascota</a>
-    </div>
-    <br>
-    <div>
-        <h2>Refugios</h2>
-        <a href="{% url 'mi_aplicacion:refugio_list' %}">Lista de Refugios</a>
-        <br>
-        <a href="{% url 'mi_aplicacion:refugio_create' %}">Agregar Refugio</a>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mascotas</h5>
+                        <p class="card-text">Encuentra una mascota para adoptar o añade una nueva.</p>
+                        <a href="{% url 'mi_aplicacion:mascota_list' %}" class="btn btn-primary">Lista de Mascotas en adopción</a>
+                        <a href="{% url 'mi_aplicacion:mascota_create' %}" class="btn btn-success mt-2">Agregar Mascota</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Refugios</h5>
+                        <p class="card-text">Consulta los refugios disponibles o añade uno nuevo.</p>
+                        <a href="{% url 'mi_aplicacion:refugio_list' %}" class="btn btn-primary">Lista de Refugios</a>
+                        <a href="{% url 'mi_aplicacion:refugio_create' %}" class="btn btn-success mt-2">Agregar Refugio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock content %}

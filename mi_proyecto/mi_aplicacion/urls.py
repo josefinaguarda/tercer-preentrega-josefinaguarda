@@ -1,18 +1,13 @@
 
-# from django.urls import path
-# from . import views
-
-# app_name= "MascotApp"
-
-# urlpatterns = [
-  #  path('', views.index, name='index'),
-   # path('mascota/', views.formulario_mascota, name='formulario_mascota'),
-   # path('refugio/', views.formulario_refugio, name='formulario_refugio'),
-   # path('adoptante/', views.formulario_adoptante, name='formulario_adoptante'),
-# ]
-
 from django.urls import path
 from . import views
+from mi_aplicacion.views import (
+    RefugioCreate,
+    RefugioDelete,
+    RefugioDetail,
+    RefugioList,
+    RefugioUpdate,
+)
 
 app_name = "mi_aplicacion"
 
@@ -20,7 +15,18 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("mascota/list", views.MascotaList, name="mascota_list"),
     path("mascota/create", views.MascotaCreate.as_view(), name="mascota_create"),
-    path("refugio/list", views.RefugioList.as_view(), name="refugio_list"),
-    path("refugio/create", views.RefugioCreate.as_view(), name="refugio_create"),
+    #path("refugio/list", views.RefugioList.as_view(), name="refugio_list"),
+    #path("refugio/create", views.RefugioCreate.as_view(), name="refugio_create"),
 ]
+
+# VISTAS BASADAS EN CLASES
+
+urlpatterns += [
+    path("refugio/list", RefugioList.as_view(), name="refugio_list"),
+    path("refugio/create", RefugioCreate.as_view(), name="refugio_create"),
+    path("refugio/detail/<int:pk>", RefugioDetail.as_view(), name="refugio_detail"),
+    path("producto/update/<int:pk>", RefugioUpdate.as_view(), name="refugio_update"),
+    path("producto/delete/<int:pk>", RefugioDelete.as_view(), name="refugio_delete"),
+]
+
 
