@@ -13,8 +13,9 @@ class MascotaForm(forms.ModelForm):
         widgets = {
             "nombre": forms.TextInput(attrs={"class": "form-control"}),
             "edad": forms.TextInput(attrs={"class": "form-control"}),
-            "sexo": forms.TextInput(attrs={"class": "form-control"}),
+            "sexo": forms.Select(attrs={"class": "form-control"}),
             "descripcion": forms.TextInput(attrs={"class": "form-control"}),
+            "refugio": forms.Select(attrs={"class": "form-control"}),
         }      
                 
 #class RefugioForm(forms.ModelForm):
@@ -30,5 +31,5 @@ class RefugioForm(forms.ModelForm):
             "nombre": forms.TextInput(attrs={"class": "form-control"}),
             "direccion": forms.TextInput(attrs={"class": "form-control"}),
             "telefono": forms.TextInput(attrs={"class": "form-control"}),
-            "mascota_id": forms.Select(attrs={"class": "form-control"})
+           # "mascota_id": forms.Select(attrs={"class": "form-control"})
         }   

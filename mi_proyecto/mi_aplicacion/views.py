@@ -28,16 +28,17 @@ def index(request):
 
 # ***** VISTAS DE MASCOTA
 
-def MascotaList(request):
-    # Filtra las mascotas que no están asociadas a ningún adoptante
-  mascotas = Mascota.objects.filter(adoptante__isnull=True)
-  return render(request, 'mi_aplicacion/mascota_list.html', {'mascotas': mascotas})
- 
- 
 #def MascotaList(request):
-    # Filtra las mascotas que no están asociadas a ningún adoptante y que tienen un refugio asociado
- # mascotas = Mascota.objects.filter(adoptante__isnull=True, refugio__isnull=False)
- # return render(request, 'mi_aplicacion/mascota_list.html', {'mascotas': mascotas})
+    # Filtra las mascotas que no están asociadas a ningún adoptante
+#  mascotas = Mascota.objects.filter(adoptante__isnull=True)
+#  return render(request, 'mi_aplicacion/mascota_list.html', {'mascotas': mascotas})
+ 
+ 
+def MascotaList(request):
+    # Filtrar las mascotas que no están asociadas a ningún adoptante
+    # Utilizando el modelo Adopcion para verificar adopciones
+    mascotas_no_adoptadas = Mascota.objects.filter(adopcion__isnull=True)
+    return render(request, 'mi_aplicacion/mascota_list.html', {'mascotas': mascotas_no_adoptadas})
 
 
 class MascotaCreate(CreateView):
