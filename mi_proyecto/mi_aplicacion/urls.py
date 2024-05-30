@@ -25,8 +25,8 @@ urlpatterns += [
     path("refugio/list", RefugioList.as_view(), name="refugio_list"),
     path("refugio/create", RefugioCreate.as_view(), name="refugio_create"),
     path("refugio/detail/<int:pk>", RefugioDetail.as_view(), name="refugio_detail"),
-    path("producto/update/<int:pk>", RefugioUpdate.as_view(), name="refugio_update"),
-    path("producto/delete/<int:pk>", RefugioDelete.as_view(), name="refugio_delete"),
+    path("refugio/update/<int:pk>", RefugioUpdate.as_view(), name="refugio_update"),
+    path("refugio/delete/<int:pk>", RefugioDelete.as_view(), name="refugio_delete"),
 ]
 
 

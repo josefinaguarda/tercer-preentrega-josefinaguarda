@@ -26,6 +26,8 @@ from mi_aplicacion.models import Refugio
 def index(request):
     return render(request, "mi_aplicacion/index.html")
 
+# ***** VISTAS DE MASCOTA
+
 def MascotaList(request):
     # Filtra las mascotas que no están asociadas a ningún adoptante
   mascotas = Mascota.objects.filter(adoptante__isnull=True)
@@ -42,6 +44,9 @@ class MascotaCreate(CreateView):
     model = models.Mascota
     form_class = forms.MascotaForm
     success_url = reverse_lazy("mi_aplicacion:mascota_list")
+    
+
+# **** VISTAS DE REFUGIO
     
 #class RefugioList(ListView):
  #   model = models.Refugio
@@ -76,7 +81,7 @@ class RefugioDetail(DetailView):
 class RefugioUpdate(UpdateView):
     model = Refugio
     form_class = RefugioForm
-    success_url = reverse_lazy("mi_aplicacioin:refugio_list")
+    success_url = reverse_lazy("mi_aplicacion:refugio_list")
     
 class RefugioDelete(DeleteView):
     model = Refugio
