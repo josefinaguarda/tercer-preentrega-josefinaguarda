@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-   MascotaWeb
+    MascotaWeb
 {% endblock title %}
 
 {% block body_title %}
@@ -10,37 +10,44 @@
 {% endblock body_title %}
 
 {% block content %}
-
-   <!-- Page Content-->
-     <div class="container px-4 px-lg-5">
-        {% if user.is_authenticated %}
-            <p class="text-info ">¡Bienvenido {{ user.username | title }}!</p>
-        {% endif %}
-    
-        <!-- Mensaje para cuando un vendedor sea creado -->
-         {% if mensaje %}
-             <p class="text-info ">{{ mensaje }} ¡Bienvenido!</p>
-         {% endif %}
-  
-        <!-- Heading Row-->
-        <div class="row gx-4 gx-lg-5 align-items-center my-5">
-            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0"
-                    src="{% static 'core/img/adopciones.PNG' %}" alt="..." /></div>
-            <div class="col-lg-5">
-                <h1 class="font-weight-light">MascotaWeb</h1>
-                <p>¡ Comunicate con nosotros !</p>
-                <a class="btn btn-primary" href="https://wa.me/54261999999" target="_blank">Whatsapp</a>
-            </div>
+<!-- Page Content-->
+<div class="container px-4 px-lg-5">
+    <!-- User Welcome Message -->
+    {% if user.is_authenticated %}
+        <div class="alert alert-info mt-4" role="alert">
+            ¡Bienvenido {{ user.username | title }}!
         </div>
-        <!-- Call to Action-->
-        <div class="card text-white bg-secondary my-5 py-4 text-center">
-            <div class="card-body">
-                <p class="text-white m-0">This call to action card is a great place to showcase some important
-                    information or display a clever tagline!</p>
-            </div>
-       
-    
-{% endblock content %} 
+    {% endif %}
+
+    <!-- Vendor Creation Message -->
+    {% if mensaje %}
+        <div class="alert alert-success mt-4" role="alert">
+            {{ mensaje }} ¡Bienvenido!
+        </div>
+    {% endif %}
+
+    <!-- Heading Row -->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7">
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'core/img/adopciones.PNG' %}" alt="..." />
+        </div>
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">MascotaWeb</h1>
+            <p>¡Comunicate con nosotros!</p>
+            <a class="btn btn-primary" href="https://wa.me/54261999999" target="_blank">Whatsapp</a>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+        <div class="card-body">
+            <h3 class="card-title">¡Adopta una Mascota Hoy!</h3>
+            <p class="card-text">Únete a nuestra misión de encontrar hogares para mascotas necesitadas. Cada adopción hace una gran diferencia.</p>
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
 
 
 
