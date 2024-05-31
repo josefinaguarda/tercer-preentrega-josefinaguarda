@@ -13,6 +13,7 @@ app_name = "mi_aplicacion"
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path('about/', views.about_us, name='about_us'),
     path("mascota/list", views.MascotaList, name="mascota_list"),
     path("mascota/create", views.MascotaCreate.as_view(), name="mascota_create"),
     #path("refugio/list", views.RefugioList.as_view(), name="refugio_list"),

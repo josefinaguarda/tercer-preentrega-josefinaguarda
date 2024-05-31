@@ -26,6 +26,9 @@ from mi_aplicacion.models import Refugio
 def index(request):
     return render(request, "mi_aplicacion/index.html")
 
+def about_us(request):
+    return render(request, 'mi_aplicacion/about_us.html')
+
 # ***** VISTAS DE MASCOTA
 
 #def MascotaList(request):
