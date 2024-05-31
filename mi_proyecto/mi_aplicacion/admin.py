@@ -20,6 +20,6 @@ class MascotaAdmin(admin.ModelAdmin):
 
 admin.site.register(models.Mascota, MascotaAdmin)
 admin.site.register(models.Refugio)
-admin.site.register(models.Adoptante)
+#admin.site.register(models.Adoptante)
 
 
