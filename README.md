@@ -114,7 +114,12 @@ Si deseas contribuir al proyecto, sigue estos pasos:
 
 - Mejorar la presentacion de la app web con mas botones para volver o regresar, para no tener que estar usando la barra de navegacion. 
 
-# (recordar para mi) para entrar a mi admin:
+# VIDEO enlace
+
+- Enlace del video demostrativo via Google Drive, el video no tiene auidio ya que no cuento con un microfono. 
+- (https://drive.google.com/drive/folders/1Q5KNOCKy2oo3ygowvIlLgJbbOTl3peVJ?usp=sharing)
+
+# Para entrar a mi admin:
 
 - Usuario: jose1
 - Contraseña: 1234
